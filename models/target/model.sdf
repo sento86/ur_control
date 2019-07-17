@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="target">
+    <static>true</static>
+    <link name="link">
+      <collision name="surface">
+        <pose>0 0 0.001 0 0 0</pose>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.4 0.4</size>
+          </plane>
+        </geometry>
+      </collision>
+      <visual name="visual">
+        <pose>0 0 0.001 0 0 -1.5707963268</pose>
+        <geometry>
+          <plane>
+            <normal>0 0 1</normal>
+            <size>0.4 0.4</size>
+          </plane>
+        </geometry>
+          <material>
+            <script>
+              <uri>model://target/materials/scripts</uri>
+              <uri>model://target/materials/textures</uri>
+              <name>target</name>
+            </script>
+          </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

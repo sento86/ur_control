@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+  <!-- Launch the Gazebo simulation -->
+  <include file="$(find ur_gazebo)/launch/ur3_ft.launch"/>
+
+  <!-- Launch visualization -->
+  <include file="$(find ur_control)/launch/rviz.launch"/>
+
+  <!-- Launch the MoveIt! move group -->
+<!--  <include file="$(find ur_control)/launch/moveit.launch"/>-->
+
+  <!--<node pkg="ur_control" type="ur3_param_server.py" name="ur3_param_server" />-->
+
+</launch>

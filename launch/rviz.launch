@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<launch>
+
+  <!-- Rviz to vizualize robot -->
+  <!--<node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d '$(find ur_control)/rviz/control.rviz'" />-->
+  <node name="rviz" pkg="rviz" type="rviz" output="screen" args="-d '$(find ur_control)/rviz/kinect.rviz'" />
+
+</launch>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot name="ft300" xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:include filename="$(find ur_control)/urdf/maths.urdf.xacro" />
+  
+  <!-- Include the force-torque-sensor model -->
+  <xacro:include filename="$(find ur_control)/models/ft_sensor/ft_sensor_robotiq.urdf.xacro"/>
+
+  <xacro:ft_sensor_ft300 parent="ee_link" name="ft300" type="ft300">
+    <origin xyz="0 0 0" rpy="0 ${M_PI_2} 0"/>
+  </xacro:ft_sensor_ft300>
+  
+  <!-- Include tool model -->
+  <xacro:include filename="$(find ur_control)/models/spoon/spoon.xacro"/>
+
+  <xacro:spoon parent="ft300_ft_measure" name="tool">
+    <!--<origin xyz="0 0.1 0.02" rpy="${M_PI_2} 0 ${M_PI_2}"/>-->
+    <!--<origin xyz="0.1 0 0.02" rpy="${M_PI_2} 0 0"/>-->
+    <origin xyz="0.1 0 0.02" rpy="${M_PI_2} 0 0"/>
+  </xacro:spoon>
+
+</robot>

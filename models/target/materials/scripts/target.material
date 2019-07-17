@@ -1,0 +1,57 @@
+material target
+{
+	technique
+	{
+		pass main
+		{
+			ambient 1.0 1.0 1.0 1
+
+			texture_unit
+			{
+				texture Target.png
+			}
+		}
+	}
+}
+
+material target2
+{
+  receive_shadows on
+  technique
+  {
+    pass
+    {
+      ambient 0.8 1.0 0.8 1.0
+      diffuse 0.8 1.0 0.8 1.0
+      specular 0.1 0.1 0.1 1.0 12.5
+
+      texture_unit
+      {
+        texture Target.jpg
+        filtering anistropic
+        max_anisotropy 16
+      }
+    }
+  }
+}
+
+material target3
+{
+	technique
+	{
+		pass main
+		{
+			ambient 1.0 1.0 1.0 1.0
+			diffuse 1.0 1.0 1.0 1.0
+			specular 0.2 0.2 0.2 1.0 12.5
+
+			texture_unit
+			{
+				texture target.jpg
+				filtering anistropic
+				max_anisotropy 16
+				scale 0.1 0.1
+			}
+		}
+	}
+}
